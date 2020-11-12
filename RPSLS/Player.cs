@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public abstract class Player
+    abstract class Player
     {
         // member variables (HAS A)
         public string name;
@@ -14,13 +14,22 @@ namespace RPSLS
         public string currentGesture;
         public List<Gestures> gestures;
 
-
         // constructor (SPAWNER)
+        public Player()
+        {
+            gestures = new List<Gestures>();
 
+            Gestures rock = new Gestures("rock");
+            Gestures paper = new Gestures("paper");
+            Gestures scissor = new Gestures("scissor");
+            Gestures lizard = new Gestures("lizard");
+            Gestures spock = new Gestures("spock");
+            gestures = new List<Gestures>() { rock, paper, scissor, lizard, spock };
+        }
 
 
         // methods (CAN DO)
-
+        public abstract void ChooseGesture();
 
     }
 }

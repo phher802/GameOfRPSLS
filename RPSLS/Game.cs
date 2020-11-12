@@ -18,11 +18,11 @@ namespace RPSLS
         {
             gestures = new List<Gestures>();
 
-            Gestures rock = new Gestures();
-            Gestures paper = new Gestures();
-            Gestures scissor = new Gestures();
-            Gestures lizard = new Gestures();
-            Gestures spock = new Gestures();
+            Gestures rock = new Gestures("rock");
+            Gestures paper = new Gestures("paper");
+            Gestures scissor = new Gestures("scissor");
+            Gestures lizard = new Gestures("lizard");
+            Gestures spock = new Gestures("spock");
             gestures = new List<Gestures>() { rock, paper, scissor, lizard, spock };
 
 
