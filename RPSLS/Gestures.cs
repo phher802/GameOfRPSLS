@@ -12,7 +12,6 @@ namespace RPSLS
         public string name;
 
 
-
         // constructor (SPAWNER)
         public Gestures(string name)
         {

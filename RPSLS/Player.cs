@@ -16,9 +16,7 @@ namespace RPSLS
 
         // constructor (SPAWNER)
         public Player()
-        {
-            gestures = new List<Gestures>();
-
+        {           
             Gestures rock = new Gestures("rock");
             Gestures paper = new Gestures("paper");
             Gestures scissor = new Gestures("scissor");
