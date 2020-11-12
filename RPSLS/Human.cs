@@ -23,17 +23,27 @@ namespace RPSLS
         {
             //display list
             //prompt player to choose from list
-           
+                  
        
         }
 
         public void DisplayList()
         {
-            Console.WriteLine("Available Moves");
-            foreach (Gestures gesture in gestures)
+
+                        
+            Console.WriteLine("Your available gestures.  Choose the number next to the gesture");
+
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(gesture.name);
+
+               Console.WriteLine(gestures[i].name + " " + i);
+                
             }
+
+            //foreach (Gestures gesture in gestures)
+            //{
+            //    Console.WriteLine(gesture.name);
+            //}
 
             Console.ReadLine();
         }

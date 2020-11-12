@@ -11,7 +11,7 @@ namespace RPSLS
         static void Main(string[] args)
         {
             Human human = new Human("pa");
-            human.ChooseGesture();
+            human.DisplayList();
 
           
         }
