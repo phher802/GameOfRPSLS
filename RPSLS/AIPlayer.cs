@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class AIPlayer
+    public class AIPlayer : Player
     {
+        // member variables (HAS A)
+
+
+
+        // constructor (SPAWNER)
+
+
+
+        // methods (CAN DO)
     }
 }
