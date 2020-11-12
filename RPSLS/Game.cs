@@ -8,5 +8,17 @@ namespace RPSLS
 {
     class Game
     {
+
+        Player playerOne;
+        Player playerTwo;
+        // member variables (HAS A)
+
+
+
+        // constructor (SPAWNER)
+
+
+
+        // methods (CAN DO)
     }
 }

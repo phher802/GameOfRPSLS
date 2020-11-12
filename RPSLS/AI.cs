@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    public class AIPlayer : Player
+    class AI : Player
     {
         // member variables (HAS A)
 
@@ -17,5 +17,10 @@ namespace RPSLS
 
 
         // methods (CAN DO)
+        public override void ChooseGesture()
+        {
+            
+        }
+
     }
 }
