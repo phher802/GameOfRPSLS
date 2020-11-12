@@ -8,5 +8,18 @@ namespace RPSLS
 {
     class Gestures
     {
+        // member variables (HAS A)
+        public string name;
+
+
+
+        // constructor (SPAWNER)
+        public Gestures(string name)
+        {
+            this.name = name;
+        }
+
+
+        // methods (CAN DO)
     }
 }
