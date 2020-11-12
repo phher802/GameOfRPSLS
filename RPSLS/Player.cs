@@ -17,11 +17,11 @@ namespace RPSLS
         // constructor (SPAWNER)
         public Player()
         {           
-            Gestures rock = new Gestures("rock");
-            Gestures paper = new Gestures("paper");
-            Gestures scissor = new Gestures("scissor");
-            Gestures lizard = new Gestures("lizard");
-            Gestures spock = new Gestures("spock");
+            Gestures rock = new Gestures("Rock");
+            Gestures paper = new Gestures("Paper");
+            Gestures scissor = new Gestures("Scissor");
+            Gestures lizard = new Gestures("Lizard");
+            Gestures spock = new Gestures("Spock");
             gestures = new List<Gestures>() { rock, paper, scissor, lizard, spock };
         }
 
