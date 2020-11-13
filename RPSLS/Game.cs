@@ -26,5 +26,8 @@ namespace RPSLS
 
 
         // methods (CAN DO)
+
+        //human userinput vs. ai random input
+
     }
 }

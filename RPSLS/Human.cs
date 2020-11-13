@@ -9,7 +9,7 @@ namespace RPSLS
     class Human : Player
     {
         // member variables (HAS A)
-
+     
 
 
         // constructor (SPAWNER)
@@ -26,7 +26,7 @@ namespace RPSLS
             DisplayList();
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
             int userInput = int.Parse(Console.ReadLine());
-       
+          
         }
 
         public void DisplayList()
@@ -43,10 +43,6 @@ namespace RPSLS
                 
             }
 
-            //foreach (Gestures gesture in gestures)
-            //{
-            //    Console.WriteLine(gesture.name);
-            //}
 
             Console.ReadLine();
         }
