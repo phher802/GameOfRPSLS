@@ -24,33 +24,14 @@ namespace RPSLS
         // methods (CAN DO)
         public override void ChooseGesture()
         {
-
-
-            for (int i = 0; i < 5; i++)
-            {
-                //int gesture = int.Parse(Console.WriteLine(gestures[i].name));
-                //gesture = (gestures[i].name);
-                random.Next(i);
-
-            }
-
-
+     
+            int rando = random.Next(gestures.Count);
+            currentGesture = gestures[rando];
+         
+            Console.WriteLine(currentGesture.name);              
             Console.ReadLine();
         }
 
-        public void RandomGesture()
-        {
-
-
-            for (int i = 0; i < 5; i++)
-            {
-                int rando = random.Next(i);
-                Console.WriteLine(rando);
-            }
-
-            Console.ReadLine();
-            
-
-        }
+       
     }
 }

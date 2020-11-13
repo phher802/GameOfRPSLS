@@ -26,7 +26,7 @@ namespace RPSLS
             DisplayList();
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
             int userInput = int.Parse(Console.ReadLine());
-          
+            currentGesture = gestures[userInput];
         }
 
         public void DisplayList()
@@ -40,11 +40,12 @@ namespace RPSLS
             {
 
                Console.WriteLine(gestures[i].name + " " + i);
-                
+               
             }
 
-
             Console.ReadLine();
+
+           
         }
     }
 }

@@ -10,8 +10,7 @@ namespace RPSLS
     {
         // member variables (HAS A)
         public string name;
-        public int score;
-        public string currentGesture;
+        public Gestures currentGesture;
         public List<Gestures> gestures;
 
         // constructor (SPAWNER)
