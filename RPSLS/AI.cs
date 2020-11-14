@@ -28,7 +28,7 @@ namespace RPSLS
             int rando = random.Next(gestures.Count);
             currentGesture = gestures[rando];
          
-            Console.WriteLine(currentGesture.name);              
+            Console.WriteLine("AI choses " + currentGesture.name);              
             Console.ReadLine();
         }
 
