@@ -24,11 +24,33 @@ namespace RPSLS
             //display list
             //prompt player to choose from list
             DisplayList();
+            UserInput();
+
+            //Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
+            //int userInput = int.Parse(Console.ReadLine());
+            //currentGesture = gestures[userInput];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //   (Console.WriteLine(gestures[i].name)
+            //}
+
+
+            //Console.WriteLine("You Chose " + );
+        }
+
+        public void UserInput()
+        {
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
             int userInput = int.Parse(Console.ReadLine());
             currentGesture = gestures[userInput];
-        }
 
+        
+            Console.WriteLine("you chose " + currentGesture.name);
+            Console.ReadLine();
+
+            //Console.WriteLine("You Chose " + userInput);
+        }
         public void DisplayList()
         {
 
