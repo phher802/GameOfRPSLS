@@ -9,7 +9,7 @@ namespace RPSLS
     class Human : Player
     {
         // member variables (HAS A)
-        string message = "Simple MessageBox";
+      
 
 
         // constructor (SPAWNER)

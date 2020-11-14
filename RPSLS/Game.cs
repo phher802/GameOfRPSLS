@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,21 +16,23 @@ namespace RPSLS
         public int score;
         public int playerOneScore;
         public int playerTwoScore;
-
-        public Gestures rockWins;
-        public Gestures paperWins;
-        public Gestures scissorWins;
-        public Gestures lizardWins;
-        public Gestures spockWins;
+        public List<Player> players;
+      
 
         // constructor (SPAWNER)
         public Game(Player playerOne, Player playerTwo)
         {
+          
             this.playerOne = playerOne;
             this.playerTwo = playerTwo;
 
             playerOneScore = 0;
             playerTwoScore = 0;
+
+            players = new List<Player>();
+            players.Add(this.playerOne);
+            players.Add(this.playerTwo);
+
         }
 
 
@@ -38,17 +41,12 @@ namespace RPSLS
 
         //public void CompareGestures()
         //{
-           
+        //    playerOne.ChooseGesture();
+        //    playerTwo.ChooseGesture();
 
-        //    if (playerOne.ChooseGesture() == gestures[0] && playerTwo.currentGesture == gestures[2])
+        //    if (gestures[0] <= gestures[2])
         //    {
-        //        Console.WriteLine(playerOne + "wins!");
-        //        playerOneScore++;
 
-        //    }else if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[3])
-        //    {
-        //        Console.WriteLine(playerOne + "wins!");
-        //        playerOneScore++;
         //    }
 
 
@@ -56,11 +54,34 @@ namespace RPSLS
 
         public void Round()
         {
-            
+         
             playerOne.ChooseGesture();
             playerTwo.ChooseGesture();
 
+            if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[2] || playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[3])
+            {
+                Console.WriteLine(playerOne + "wins!");
+                playerOneScore++;
 
+            }         
+            else if (playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[0] || playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[4])
+            {
+                Console.WriteLine(playerOne + "wins!");
+                playerOneScore++;
+
+            }
+            else if (playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[1] || playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[3])
+            {
+                Console.WriteLine(playerOne + "wins!");
+            }
+            else if (playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[1] || playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[4])
+            {
+                Console.WriteLine(playerOne + "wins!");
+            }
+            else if (playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[2] || playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[0])
+            {
+                Console.WriteLine(playerOne + "wins!");
+            }
 
         }
         public void DisplayRules()
