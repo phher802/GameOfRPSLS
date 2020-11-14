@@ -21,12 +21,14 @@ namespace RPSLS
             Gestures scissors = new Gestures("Scissors");
             Gestures lizard = new Gestures("Lizard");
             Gestures spock = new Gestures("Spock");
-            gestures = new List<Gestures>() { rock, paper, scissor, lizard, spock };
+            gestures = new List<Gestures>() { rock, paper, scissors, lizard, spock };
         }
 
 
         // methods (CAN DO)
         public abstract void ChooseGesture();
+
+
 
     }
 }

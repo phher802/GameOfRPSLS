@@ -16,7 +16,7 @@ namespace RPSLS
         public int score;
         public int playerOneScore;
         public int playerTwoScore;
-        public List<Player> players;
+       
       
 
         // constructor (SPAWNER)
@@ -29,9 +29,13 @@ namespace RPSLS
             playerOneScore = 0;
             playerTwoScore = 0;
 
-            players = new List<Player>();
-            players.Add(this.playerOne);
-            players.Add(this.playerTwo);
+            Gestures rock = new Gestures("Rock");
+            Gestures paper = new Gestures("Paper");
+            Gestures scissors = new Gestures("Scissors");
+            Gestures lizard = new Gestures("Lizard");
+            Gestures spock = new Gestures("Spock");
+            gestures = new List<Gestures>() { rock, paper, scissors, lizard, spock };
+            // is there a way to access the list from player class without also putting it here?
 
         }
 
@@ -54,13 +58,12 @@ namespace RPSLS
 
         public void Round()
         {
-         
             playerOne.ChooseGesture();
             playerTwo.ChooseGesture();
 
-            if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[2] || playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[3])
+            if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[2] || playerTwo.currentGesture == gestures[3])
             {
-                if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[2])
+                if (playerTwo.currentGesture == gestures[2])
                 {
                     Console.WriteLine("Rock crushes Scissors!");
                 }
@@ -70,7 +73,7 @@ namespace RPSLS
                 }
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
-            }         
+            }
             else if (playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[0] || playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[4])
             {
                 if (playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[0])
