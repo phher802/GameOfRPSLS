@@ -62,25 +62,26 @@ namespace RPSLS
             {
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
-
             }         
             else if (playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[0] || playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[4])
             {
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
-
             }
             else if (playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[1] || playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[3])
             {
                 Console.WriteLine(playerOne + "wins!");
+                playerOneScore++;
             }
             else if (playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[1] || playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[4])
             {
                 Console.WriteLine(playerOne + "wins!");
+                playerOneScore++;
             }
             else if (playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[2] || playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[0])
             {
                 Console.WriteLine(playerOne + "wins!");
+                playerOneScore++;
             }
 
         }
