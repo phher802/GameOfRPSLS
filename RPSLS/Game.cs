@@ -60,26 +60,66 @@ namespace RPSLS
 
             if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[2] || playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[3])
             {
+                if (playerOne.currentGesture == gestures[0] && playerTwo.currentGesture == gestures[2])
+                {
+                    Console.WriteLine("Rock crushes Scissors!");
+                }
+                else
+                {
+                    Console.WriteLine("Rock crushes Lizard!");
+                }
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }         
             else if (playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[0] || playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[4])
             {
+                if (playerOne.currentGesture == gestures[1] && playerTwo.currentGesture == gestures[0])
+                {
+                    Console.WriteLine("Paper covers Rock!");
+                }
+                else
+                {
+                    Console.WriteLine("Paper disproves Spock!");
+                }
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
             else if (playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[1] || playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[3])
             {
+                if (playerOne.currentGesture == gestures[2] && playerTwo.currentGesture == gestures[1])
+                {
+                    Console.WriteLine("Scissors cuts Paper!");
+                }
+                else
+                {
+                    Console.WriteLine("Scissors decapitates Lizard!");
+                }
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
             else if (playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[1] || playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[4])
             {
+                if (playerOne.currentGesture == gestures[3] && playerTwo.currentGesture == gestures[1])
+                {
+                    Console.WriteLine("Lizard eats Paper!");
+                }
+                else
+                {
+                    Console.WriteLine("Lizard poisons Spock");
+                }
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
             else if (playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[2] || playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[0])
             {
+                if (playerOne.currentGesture == gestures[4] && playerTwo.currentGesture == gestures[2])
+                {
+                    Console.WriteLine("Spock smashes Scissors!");
+                }
+                else
+                {
+                    Console.WriteLine("Spock vaporizes Rock");
+                }
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
