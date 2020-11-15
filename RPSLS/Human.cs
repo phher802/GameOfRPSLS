@@ -9,13 +9,13 @@ namespace RPSLS
     class Human : Player
     {
         // member variables (HAS A)
-      
+        public string name;
 
 
         // constructor (SPAWNER)
-        public Human(string name)
+        public Human()
         {
-            this.name = name;
+             
         }
 
         // methods (CAN DO)

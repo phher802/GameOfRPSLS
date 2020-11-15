@@ -10,11 +10,11 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Player playerOne = new Human("pa");
+            Player playerOne = new Human();
             Player playerTwo = new AI();
            
             AI ai = new AI();
-            Human human = new Human("kayden");
+            Human human = new Human();
             //human.ChooseGesture();
             //human.UserInput();
             //playerOne.ChooseGesture();
