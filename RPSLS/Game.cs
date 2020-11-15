@@ -16,10 +16,7 @@ namespace RPSLS
         public int score;
         public int playerOneScore;
         public int playerTwoScore;
-        public List<Player> humanVsAI;
-        public List<Player> humanVsHuman;
-
-
+   
 
         // constructor (SPAWNER)
         public Game(Player playerOne, Player playerTwo)
@@ -39,16 +36,8 @@ namespace RPSLS
             gestures = new List<Gestures>() { rock, paper, scissors, lizard, spock };
             // is there a way to access the list from player class without also putting it here?
 
-            Player human = new Human();
-            Player AI = new AI();
 
-            humanVsAI = new List<Player>();
-            humanVsAI.Add(human);
-            humanVsAI.Add(AI);
 
-            humanVsHuman = new List<Player>();
-            humanVsHuman.Add(human);
-            humanVsHuman.Add(human);
         }
 
 
@@ -77,8 +66,9 @@ namespace RPSLS
             playerTwo.ChooseGesture();
 
             int i = 0;
+         
 
-            if (playerOne.currentGesture == gestures[i] && playerTwo.currentGesture == gestures[i + 2] || playerTwo.currentGesture == gestures[i + 3])
+            if ((playerOne.currentGesture == gestures[i]) && (playerTwo.currentGesture == gestures[i + 2] || playerTwo.currentGesture == gestures[i + 3]))
             {
                 if (playerTwo.currentGesture == gestures[i + 2])
                 {
@@ -91,7 +81,7 @@ namespace RPSLS
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
-            else if (playerOne.currentGesture == gestures[i + 1] && playerTwo.currentGesture == gestures[i] || playerTwo.currentGesture == gestures[i + 4])
+            else if (playerOne.currentGesture == gestures[i + 1] && (playerTwo.currentGesture == gestures[i] || playerTwo.currentGesture == gestures[i + 4]))
             {
                 if (playerTwo.currentGesture == gestures[0])
                 {
@@ -104,7 +94,7 @@ namespace RPSLS
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
-            else if (playerOne.currentGesture == gestures[i + 2] && playerTwo.currentGesture == gestures[i + 1] || playerTwo.currentGesture == gestures[i + 3])
+            else if (playerOne.currentGesture == gestures[i + 2] && (playerTwo.currentGesture == gestures[i + 1] || playerTwo.currentGesture == gestures[i + 3]))
             {
                 if (playerTwo.currentGesture == gestures[i + 1])
                 {
@@ -117,7 +107,7 @@ namespace RPSLS
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
-            else if (playerOne.currentGesture == gestures[i + 3] && playerTwo.currentGesture == gestures[i + 1] || playerTwo.currentGesture == gestures[i + 4])
+            else if (playerOne.currentGesture == gestures[i + 3] && (playerTwo.currentGesture == gestures[i + 1] || playerTwo.currentGesture == gestures[i + 4]))
             {
                 if (playerTwo.currentGesture == gestures[i + 1])
                 {
@@ -130,7 +120,7 @@ namespace RPSLS
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
-            else if (playerOne.currentGesture == gestures[i + 4] && playerTwo.currentGesture == gestures[i + 2] || playerTwo.currentGesture == gestures[i])
+            else if (playerOne.currentGesture == gestures[i + 4] && (playerTwo.currentGesture == gestures[i + 2] || playerTwo.currentGesture == gestures[i]))
             {
                 if (playerTwo.currentGesture == gestures[i + 2])
                 {
@@ -143,7 +133,7 @@ namespace RPSLS
                 Console.WriteLine(playerOne + "wins!");
                 playerOneScore++;
             }
-            else if (playerTwo.currentGesture == gestures[i] && playerOne.currentGesture == gestures[i + 2] || playerOne.currentGesture == gestures[i + 3])
+            else if (playerTwo.currentGesture == gestures[i] && (playerOne.currentGesture == gestures[i + 2] || playerOne.currentGesture == gestures[i + 3]))
             {
                 if (playerOne.currentGesture == gestures[i + 2])
                 {
@@ -156,7 +146,7 @@ namespace RPSLS
                 Console.WriteLine(playerTwo + "wins!");
                 playerTwoScore++;
             }
-            else if (playerTwo.currentGesture == gestures[i + 1] && playerOne.currentGesture == gestures[i] || playerOne.currentGesture == gestures[i + 4])
+            else if (playerTwo.currentGesture == gestures[i + 1] && (playerOne.currentGesture == gestures[i] || playerOne.currentGesture == gestures[i + 4]))
             {
                 if (playerOne.currentGesture == gestures[i])
                 {
@@ -169,7 +159,7 @@ namespace RPSLS
                 Console.WriteLine(playerTwo + "wins!");
                 playerTwoScore++;
             }
-            else if (playerTwo.currentGesture == gestures[i + 2] && playerOne.currentGesture == gestures[i + 1] || playerOne.currentGesture == gestures[i + 3])
+            else if (playerTwo.currentGesture == gestures[i + 2] && (playerOne.currentGesture == gestures[i + 1] || playerOne.currentGesture == gestures[i + 3]))
             {
                 if (playerOne.currentGesture == gestures[i + 1])
                 {
@@ -182,7 +172,7 @@ namespace RPSLS
                 Console.WriteLine(playerTwo + "wins!");
                 playerTwoScore++;
             }
-            else if (playerTwo.currentGesture == gestures[i + 3] && playerOne.currentGesture == gestures[i + 1] || playerOne.currentGesture == gestures[i + 4])
+            else if (playerTwo.currentGesture == gestures[i + 3] && (playerOne.currentGesture == gestures[i + 1] || playerOne.currentGesture == gestures[i + 4]))
             {
                 if (playerOne.currentGesture == gestures[i + 1])
                 {
@@ -195,7 +185,7 @@ namespace RPSLS
                 Console.WriteLine(playerTwo + "wins!");
                 playerTwoScore++;
             }
-            else if (playerTwo.currentGesture == gestures[i + 4] && playerOne.currentGesture == gestures[i + 2] || playerOne.currentGesture == gestures[i])
+            else if (playerTwo.currentGesture == gestures[i + 4] && (playerOne.currentGesture == gestures[i + 2] || playerOne.currentGesture == gestures[i]))
             {
                 if (playerOne.currentGesture == gestures[i + 2])
                 {
