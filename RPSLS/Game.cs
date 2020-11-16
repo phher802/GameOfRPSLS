@@ -196,8 +196,8 @@ namespace RPSLS
         {
             if (playerOneScore == 3)
             {
-                Console.WriteLine(playerOne.name + " wins the game!");
 
+                Console.WriteLine(playerOne.name + " wins the game!");
             }
             else if(playerTwoScore == 3)
             {
@@ -207,13 +207,22 @@ namespace RPSLS
 
         public void RunGame()
         {
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
             {
-                Round();
+                DisplayWinner();
+                Round();               
 
+                //if (playerOneScore == 3)
+                //{
+                //    Console.WriteLine(playerOne.name + " wins the game!");
+                //}
+                //else
+                //{
+                //    Console.WriteLine(playerTwo.name + " wins the game!");
+                //}
             }
 
-            DisplayWinner();
+            
 
         }
     }

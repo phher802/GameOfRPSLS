@@ -14,13 +14,13 @@ namespace RPSLS
             Player playerTwo = new AI("Nano");
 
             //AI ai = new AI();
-            //Human human = new Human();
+            Human human = new Human("pa");
             //human.ChooseGesture();
-            //human.UserInput();
+            human.UserInput();
             //playerOne.ChooseGesture();
 
-            Game game = new Game(playerOne, playerTwo);
-            game.Round();
+            //Game game = new Game(playerOne, playerTwo);
+            //game.RunGame();
             //game.CompareGestures();
 
             //ai.ChooseGesture();

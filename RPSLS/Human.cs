@@ -9,14 +9,14 @@ namespace RPSLS
     class Human : Player
     {
         // member variables (HAS A)
-        
-        
+
+
 
         // constructor (SPAWNER)
         public Human(string name)
         {
             this.name = name;
-             
+
         }
 
         // methods (CAN DO)
@@ -26,34 +26,44 @@ namespace RPSLS
             //prompt player to choose from list
             DisplayList();
             UserInput();
-            Console.WriteLine("you chose " + currentGesture.name);
-            Console.ReadLine();
+            //Console.WriteLine("you chose " + currentGesture.name);
+          
         }
 
         public void UserInput()
         {
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
-            int userInput = int.Parse(Console.ReadLine());
-            currentGesture = gestures[userInput];             
+            //int userInput = int.Parse(Console.ReadLine());
+            
+
+            string userInputasString = Console.ReadLine();
+
+            int userInput;
+            while (int.TryParse(userInputasString, out userInput))
+            {
+                if (userInput > 4)
+                {
+                    Console.WriteLine("Pick a number from 0 to 4");
+                    userInputasString = Console.ReadLine();
+                }
+            }
+
+            currentGesture = gestures[userInput];
+            Console.WriteLine($"You chose: {gestures[userInput].name}");
 
         }
         public void DisplayList()
         {
 
-                        
             Console.WriteLine("Your available gestures");
             Console.WriteLine(" ");
 
             for (int i = 0; i < 5; i++)
             {
-
-               Console.WriteLine(gestures[i].name + " " + i);
-               
+                Console.WriteLine(gestures[i].name + " " + i);
             }
 
             Console.ReadLine();
-
-           
         }
     }
 }
