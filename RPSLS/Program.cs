@@ -11,7 +11,7 @@ namespace RPSLS
         static void Main(string[] args)
         {
             Player playerOne = new Human("Pa");
-            Player playerTwo = new AI("Nano the AI");
+            Player playerTwo = new AI("Nano");
 
             //AI ai = new AI();
             //Human human = new Human();

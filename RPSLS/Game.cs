@@ -44,23 +44,9 @@ namespace RPSLS
 
         // methods (CAN DO)
 
-        //public void CompareGestures()
-        //{
-        //    playerOne.ChooseGesture();
-        //    playerTwo.ChooseGesture();
-
-        //    if (gestures[0] <= gestures[2])
-        //    {
-
-        //    }
-
-
-        //}
-
 
         public void Round()
         {
-
 
             playerOne.ChooseGesture();
             playerTwo.ChooseGesture();         
@@ -201,9 +187,33 @@ namespace RPSLS
         }
         public void DisplayRules()
         {
+           
 
         }
         //human userinput vs. ai random input
 
+        public void DisplayWinner()
+        {
+            if (playerOneScore == 3)
+            {
+                Console.WriteLine(playerOne.name + " wins the game!");
+
+            }
+            else if(playerTwoScore == 3)
+            {
+                Console.WriteLine(playerTwo.name + " wins the game!");
+            }
+        }
+
+        public void runGame()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Round();
+
+            }
+
+
+        }
     }
 }
