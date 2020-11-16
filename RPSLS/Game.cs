@@ -205,14 +205,15 @@ namespace RPSLS
             }
         }
 
-        public void runGame()
+        public void RunGame()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Round();
 
             }
 
+            DisplayWinner();
 
         }
     }
