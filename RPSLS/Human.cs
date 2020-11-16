@@ -26,30 +26,35 @@ namespace RPSLS
             //prompt player to choose from list
             DisplayList();
             UserInput();
-            //Console.WriteLine("you chose " + currentGesture.name);
-          
+            Console.WriteLine("You chose " + currentGesture.name);
         }
 
         public void UserInput()
         {
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
-            //int userInput = int.Parse(Console.ReadLine());
-            
+            int userInput = int.Parse(Console.ReadLine());
 
-            string userInputasString = Console.ReadLine();
-
-            int userInput;
-            while (int.TryParse(userInputasString, out userInput))
+            while (userInput >= 5 )
             {
-                if (userInput > 4)
-                {
-                    Console.WriteLine("Pick a number from 0 to 4");
-                    userInputasString = Console.ReadLine();
-                }
+                Console.WriteLine("Pick a number from 0 to 4");
+                userInput = int.Parse(Console.ReadLine());
             }
 
             currentGesture = gestures[userInput];
-            Console.WriteLine($"You chose: {gestures[userInput].name}");
+
+            //string userInputasString = Console.ReadLine();
+            //int userInput;
+            //while (int.TryParse(userInputasString, out userInput))
+            //{
+            //    if (userInput >= 5)
+            //    {
+            //        Console.WriteLine("Pick a number from 0 to 4");
+            //        userInputasString = Console.ReadLine();
+            //    }
+            //}
+
+
+
 
         }
         public void DisplayList()
