@@ -14,10 +14,10 @@ namespace RPSLS
 
 
         // constructor (SPAWNER)
-        public AI()
+        public AI(string name)
         {
             random = new Random();
-
+            this.name = name;
         }
 
 

@@ -21,8 +21,8 @@ namespace RPSLS
         // constructor (SPAWNER)
         public Game(Player playerOne, Player playerTwo)
         {
-            this.playerOne = new Human("Pa");
-            this.playerTwo = new AI();
+            this.playerOne = playerOne;
+            this.playerTwo = playerTwo;
 
             playerOneScore = 0;
             playerTwoScore = 0;
@@ -193,7 +193,7 @@ namespace RPSLS
             }
             else if (playerOne.currentGesture.name == playerTwo.currentGesture.name)
             {
-                Console.WriteLine("It's a Tie");
+                Console.WriteLine("It's a Tie, play again!");
             }
 
             Console.ReadLine();
