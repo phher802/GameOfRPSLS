@@ -9,12 +9,13 @@ namespace RPSLS
     class Human : Player
     {
         // member variables (HAS A)
-        public string name;
-
+        
+        
 
         // constructor (SPAWNER)
-        public Human()
+        public Human(string name)
         {
+            this.name = name;
              
         }
 
@@ -25,7 +26,6 @@ namespace RPSLS
             //prompt player to choose from list
             DisplayList();
             UserInput();
-            Console.WriteLine(" ");
             Console.WriteLine("you chose " + currentGesture.name);
             Console.ReadLine();
         }
