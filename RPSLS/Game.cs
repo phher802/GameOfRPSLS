@@ -17,8 +17,7 @@ namespace RPSLS
         public int playerOneScore;
         public int playerTwoScore;
 
-        public List<Player> players;
-
+      
         // constructor (SPAWNER)
         public Game(Player playerOne, Player playerTwo)
         {
@@ -188,32 +187,17 @@ namespace RPSLS
         }
         public void DisplayRules()
         {
-            Console.WriteLine("Welcome to RockPaperScissorLizardSpock!");
+            Console.WriteLine("Welcome to Rock-Paper-Scissors-Lizard-Spock!");
             Console.WriteLine(" ");
             Console.WriteLine("Newcomer Lizard eats Paper, poisons Spock, is decapitated by scissors, and gets crushed by Rock.");
             Console.WriteLine("And Spock smashes Scissors, vaporizes Rock, and gets disproves by paper.");
-            Console.WriteLine("Best out of three is the winner. Play with another human or with AI Nano." + " Enjoy!");
+            Console.WriteLine("Best out of three is the winner. Play with another person or with RPSLS's AI, Nano." + " Enjoy!");
 
 
         }
         //human userinput vs. ai random input
 
-        //public void DisplayWinner()
-        //{
-
-        //    if (playerOneScore == 3)
-        //    {
-        //        Console.WriteLine(playerOne.name + " wins the game!");
-                
-        //    }
-        //    else if (playerTwoScore == 3)
-        //    {
-        //        Console.WriteLine(playerTwo.name + " wins the game!");
-                
-        //    }
-
-        //}
-
+     
 
         public void RunGame()
         {
@@ -240,13 +224,7 @@ namespace RPSLS
             }
 
             Console.ReadLine();
-            //while ((playerOneScore <= 3) || (playerTwoScore <=3))
-            //{
-            //    Round();
-            //    DisplayWinner();
-            //    break;
-            //}
-
+          
 
 
         }

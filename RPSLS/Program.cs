@@ -13,18 +13,11 @@ namespace RPSLS
             Player playerOne = new Human("pa");
             Player playerTwo = new AI("Nano");
 
-            //AI ai = new AI();
-            //Human human = new Human("pa");
-            ////human.ChooseGesture();
-            //human.UserInput();
-            //playerOne.ChooseGesture();
+          
 
             Game game = new Game(playerOne, playerTwo);
             game.RunGame();
-            //game.CompareGestures();
-
-            //ai.ChooseGesture();
-
+         
         }
     }
 }
