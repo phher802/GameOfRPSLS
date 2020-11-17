@@ -190,7 +190,11 @@ namespace RPSLS
         }
         public void DisplayRules()
         {
-           
+            Console.WriteLine("Welcome to RockPaperScissorLizardSpock!");
+            Console.WriteLine("Newcomer Lizard eats Paper, poisons Spock, is decapitated by scissors, and gets crushed by Rock");
+            Console.WriteLine("Spock smashes Scissors, vaporizes Rock, and gets disproves by paper");
+            Console.WriteLine("Best out of three, with another human or with Nano, the AI" + "Enjoy");
+      
 
         }
         //human userinput vs. ai random input
@@ -210,40 +214,20 @@ namespace RPSLS
 
         public void RunGame()
         {
-            GetName();
-
+         
             for (int i = 0; i < 10; i++)
-            {
-              
+            {             
                 DisplayWinner();
                 Round();               
-
-               
+             
             }
 
             
-
         }
 
-        public void GetName()
-        {
-            
-
-            if ((players[0] == new Human()) || players[1] == new Human())
-            {
-                Console.WriteLine("What is your name?");
-                char name = char.Parse(Console.ReadLine());
-
-                while (name >= 8)
-                {
-                    Console.WriteLine("Please limit your name to 8 characters.  Try again.");
-                    name = char.Parse(Console.ReadLine());
-                }
-
-               
-            }
+   
 
 
-        }
+       
     }
 }
