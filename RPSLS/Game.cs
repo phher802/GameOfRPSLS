@@ -191,9 +191,9 @@ namespace RPSLS
         public void DisplayRules()
         {
             Console.WriteLine("Welcome to RockPaperScissorLizardSpock!");
-            Console.WriteLine("Newcomer Lizard eats Paper, poisons Spock, is decapitated by scissors, and gets crushed by Rock");
-            Console.WriteLine("Spock smashes Scissors, vaporizes Rock, and gets disproves by paper");
-            Console.WriteLine("Best out of three, with another human or with Nano, the AI" + "Enjoy");
+            Console.WriteLine("Newcomer Lizard eats Paper, poisons Spock, is decapitated by scissors, and gets crushed by Rock.");
+            Console.WriteLine("And Spock smashes Scissors, vaporizes Rock, and gets disproves by paper.");
+            Console.WriteLine("Best out of three is the winner. Play with another human or with AI Nano." + " Enjoy!");
       
 
         }
@@ -216,7 +216,8 @@ namespace RPSLS
         {
          
             for (int i = 0; i < 10; i++)
-            {             
+            {
+                DisplayRules();
                 DisplayWinner();
                 Round();               
              
