@@ -9,8 +9,7 @@ namespace RPSLS
     class Human : Player
     {
         // member variables (HAS A)
-
-
+        
 
         // constructor (SPAWNER)
         public Human(string name)
@@ -24,37 +23,37 @@ namespace RPSLS
         {
             //display list
             //prompt player to choose from list
-            DisplayList();
+            DisplayList();      
             UserInput();
             Console.WriteLine("You chose " + currentGesture.name);
         }
 
+        public char GetHumanName()
+        {
+            Console.WriteLine("What is your name?");
+            char name = char.Parse(Console.ReadLine());
+
+            while ( name >= 8)
+            {
+                Console.WriteLine("Please limit your name to 8 characters.  Try again.");
+                name = char.Parse(Console.ReadLine());
+            }
+
+            return name;
+        }
         public void UserInput()
         {
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
             int userInput = int.Parse(Console.ReadLine());
 
-            while (userInput >= 5 )
+            while (userInput >= 5) 
             {
                 Console.WriteLine("Pick a number from 0 to 4");
                 userInput = int.Parse(Console.ReadLine());
             }
 
             currentGesture = gestures[userInput];
-
-            //string userInputasString = Console.ReadLine();
-            //int userInput;
-            //while (int.TryParse(userInputasString, out userInput))
-            //{
-            //    if (userInput >= 5)
-            //    {
-            //        Console.WriteLine("Pick a number from 0 to 4");
-            //        userInputasString = Console.ReadLine();
-            //    }
-            //}
-
-
-
+            
 
         }
         public void DisplayList()
