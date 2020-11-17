@@ -13,7 +13,7 @@ namespace RPSLS
         public Player playerOne;
         public Player playerTwo;
         public List<Gestures> gestures;  // if you make the same list variable inside two classes, are they linked or are they different list?
-       
+
         public int playerOneScore;
         public int playerTwoScore;
 
@@ -37,9 +37,7 @@ namespace RPSLS
             //is there a way to access the list from player class without also putting it here?
             //when i don't have this list here, i get the "Object reference not set to an instance of an object error"
 
-            players = new List<Player>();
-            players.Add(playerOne);
-            players.Add(playerTwo);
+        
 
         }
 
@@ -52,9 +50,9 @@ namespace RPSLS
         {
 
             playerOne.ChooseGesture();
-            playerTwo.ChooseGesture();         
-            
-          if ((playerOne.currentGesture.name == gestures[0].name) && (playerTwo.currentGesture.name == gestures[2].name))
+            playerTwo.ChooseGesture();
+
+            if ((playerOne.currentGesture.name == gestures[0].name) && (playerTwo.currentGesture.name == gestures[2].name))
             {
                 Console.WriteLine("Rock crushes Scissors!");
                 Console.WriteLine(playerOne.name + " wins!");
@@ -190,45 +188,76 @@ namespace RPSLS
         }
         public void DisplayRules()
         {
-            Console.WriteLine("Welcome to RockPaperScissorLizardSpock!" );
+            Console.WriteLine("Welcome to RockPaperScissorLizardSpock!");
+            Console.WriteLine(" ");
             Console.WriteLine("Newcomer Lizard eats Paper, poisons Spock, is decapitated by scissors, and gets crushed by Rock.");
             Console.WriteLine("And Spock smashes Scissors, vaporizes Rock, and gets disproves by paper.");
             Console.WriteLine("Best out of three is the winner. Play with another human or with AI Nano." + " Enjoy!");
-      
+
 
         }
         //human userinput vs. ai random input
 
-        public void DisplayWinner()
-        {
-            if (playerOneScore == 3)
-            {
+        //public void DisplayWinner()
+        //{
 
-                Console.WriteLine(playerOne.name + " wins the game!");
-            }
-            else if(playerTwoScore == 3)
-            {
-                Console.WriteLine(playerTwo.name + " wins the game!");
-            }
-        }
+        //    if (playerOneScore == 3)
+        //    {
+        //        Console.WriteLine(playerOne.name + " wins the game!");
+                
+        //    }
+        //    else if (playerTwoScore == 3)
+        //    {
+        //        Console.WriteLine(playerTwo.name + " wins the game!");
+                
+        //    }
+
+        //}
+
 
         public void RunGame()
         {
-         
+
+            DisplayRules();
+
+
             for (int i = 0; i < 10; i++)
             {
-                DisplayRules();
-                DisplayWinner();
-                Round();               
-             
+                Round();
+
+                if (playerOneScore == 3)
+                {
+                    Console.WriteLine(playerOne.name + " wins the game!");
+                    break;
+                }
+                else if (playerTwoScore == 3)
+                {
+                    Console.WriteLine(playerTwo.name + " wins the game!");
+                    break;   
+                }
+                
+
             }
 
-            
+            Console.ReadLine();
+            //while ((playerOneScore <= 3) || (playerTwoScore <=3))
+            //{
+            //    Round();
+            //    DisplayWinner();
+            //    break;
+            //}
+
+
+
         }
 
-   
 
 
-       
+
+
+
+
+
     }
 }
+

@@ -49,7 +49,6 @@ namespace RPSLS
 
             Console.WriteLine("Your available gestures");
             Console.WriteLine(" ");
-
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine(gestures[i].name + " " + i);
