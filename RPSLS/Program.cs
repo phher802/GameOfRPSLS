@@ -10,7 +10,7 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Player playerOne = new Human("Pa");
+            Player playerOne = new Human("pa");
             Player playerTwo = new AI("Nano");
 
             //AI ai = new AI();

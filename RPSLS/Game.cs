@@ -17,6 +17,7 @@ namespace RPSLS
         public int playerOneScore;
         public int playerTwoScore;
 
+        public List<Player> players;
 
         // constructor (SPAWNER)
         public Game(Player playerOne, Player playerTwo)
@@ -34,9 +35,11 @@ namespace RPSLS
             Gestures spock = new Gestures("Spock");
             gestures = new List<Gestures>() { rock, paper, scissors, lizard, spock };
             //is there a way to access the list from player class without also putting it here?
-            //when i don't have this list here, i get the "Object reference not set to an instance of an object error
+            //when i don't have this list here, i get the "Object reference not set to an instance of an object error"
 
-
+            players = new List<Player>();
+            players.Add(playerOne);
+            players.Add(playerTwo);
 
         }
 
@@ -207,22 +210,39 @@ namespace RPSLS
 
         public void RunGame()
         {
+            GetName();
+
             for (int i = 0; i < 10; i++)
             {
+              
                 DisplayWinner();
                 Round();               
 
-                //if (playerOneScore == 3)
-                //{
-                //    Console.WriteLine(playerOne.name + " wins the game!");
-                //}
-                //else
-                //{
-                //    Console.WriteLine(playerTwo.name + " wins the game!");
-                //}
+               
             }
 
             
+
+        }
+
+        public void GetName()
+        {
+            
+
+            if ((players[0] == new Human()) || players[1] == new Human())
+            {
+                Console.WriteLine("What is your name?");
+                char name = char.Parse(Console.ReadLine());
+
+                while (name >= 8)
+                {
+                    Console.WriteLine("Please limit your name to 8 characters.  Try again.");
+                    name = char.Parse(Console.ReadLine());
+                }
+
+               
+            }
+
 
         }
     }

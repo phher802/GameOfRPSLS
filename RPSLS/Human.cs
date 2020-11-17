@@ -28,19 +28,7 @@ namespace RPSLS
             Console.WriteLine("You chose " + currentGesture.name);
         }
 
-        public char GetHumanName()
-        {
-            Console.WriteLine("What is your name?");
-            char name = char.Parse(Console.ReadLine());
-
-            while ( name >= 8)
-            {
-                Console.WriteLine("Please limit your name to 8 characters.  Try again.");
-                name = char.Parse(Console.ReadLine());
-            }
-
-            return name;
-        }
+     
         public void UserInput()
         {
             Console.WriteLine("Choose a gesture to play by entering the number next to the gesture");
