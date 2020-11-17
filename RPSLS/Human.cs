@@ -25,7 +25,7 @@ namespace RPSLS
             //prompt player to choose from list
             DisplayList();      
             UserInput();
-            Console.WriteLine("You chose " + currentGesture.name);
+            Console.WriteLine( name + " chose " + currentGesture.name);
         }
 
      

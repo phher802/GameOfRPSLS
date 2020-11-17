@@ -28,7 +28,7 @@ namespace RPSLS
             int rando = random.Next(gestures.Count);
             currentGesture = gestures[rando];
          
-            Console.WriteLine("Nano choses " + currentGesture.name);              
+            Console.WriteLine(name + " chose " + currentGesture.name);              
             Console.ReadLine();
         }
 
